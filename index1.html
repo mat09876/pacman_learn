@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<style>
+			button {
+				width: 50px;
+				height: 20px;
+			}
+		</style>
+	</head>
+<body>
+
+<form class="button">
+    <button type="submit" id="myBtn" value="mathew"  ></button>
+</form>
+
+<script>
+var nameInput = document.getElementById('name');
+
+var btn = document.getElementById('myBtn');
+
+
+
+document.querySelector('form.button').addEventListener('submit', function (e) {
+
+    //stops form from submittings
+    e.preventDefault();
+
+    console.log(btn.value);    
+});
+</script>
+
+</body>
+</html>
