@@ -514,7 +514,7 @@ CalBtn.prototype._onClickMe = function() {
 	}
 
 	this.cal.display.addText(this.text + ' ');
-	if (this.isOperater) {
+ 	if (this.isOperater) {
 		this.cal.operator = this.operator;
 	} else {
 		this.cal.values.push(parseFloat(this.text));
