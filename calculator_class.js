@@ -224,13 +224,7 @@
 				operator: 'EXP'
 			},
 			
-			rad: {
-				text: 'Rad',
-				bg: 'dark',
-				value: 'rad',
-				isOperater: !0,
-				operator: 'rad'
-			},
+
 			
 			xy: {
 				text: 'xy',
@@ -341,14 +335,42 @@
 
 	Cal.prototype.settings = function() {};
 
-	Cal.prototype.add = function(x, y) {
+	Cal.prototype.rad = function(x, y) {
 		var sum = x + y;
 		this.display.dom.innerHTML = sum;
 		return sum;
 	};
 
-		Cal.prototype.multiply = function(x, y) {
-		var sum = x * y;
+	Cal.prototype.xl = function(x, y) {
+		var sum = x + y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.percentage = function(x, y) {
+		var sum = x % y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.clear = function(x, y) {
+		window.location.reload();
+	};	
+
+		Cal.prototype.Inv = function(x, y) {
+		var sum = x + y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.sin = function(x, y) {
+		var sum = x + y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.ln = function(x, y) {
+		var sum = x + y;
 		this.display.dom.innerHTML = sum;
 		return sum;
 	};
@@ -359,13 +381,81 @@
 		return sum;
 	};
 
+		Cal.prototype.pi = function(x, y) {
+		var sum = x + y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};				
+
+		Cal.prototype.cos = function(x, y) {
+		var sum = x % y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+	Cal.prototype.log = function(x, y) {
+		var sum = x % y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.multiply = function(x, y) {
+		var sum = x * y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.Irrational_Number = function(x, y) {
+		var sum = x + y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.tan = function(x, y) {
+		var sum = x + y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.Square_Root = function(x, y) {
+		var sum = x + y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};			
 
 
-	Cal.prototype.minus = function(x, y) {
+		Cal.prototype.minus = function(x, y) {
+		var sum = x - y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+		Cal.prototype.Ans = function(x, y) {
+		var sum = x / y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};	
+
+
+		Cal.prototype.EXP = function(x, y) {
+		var sum = x / y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};
+
+
+
+	Cal.prototype.xy = function(x, y) {
 		var r = x - y;
 		this.display.dom.innerHTML = r;
 		return r;
 	};
+
+		Cal.prototype.add = function(x, y) {
+		var sum = x + y;
+		this.display.dom.innerHTML = sum;
+		return sum;
+	};	
 
 	Cal.prototype.doMath = function() {
 		this[this.operator].apply(this, this.values);
